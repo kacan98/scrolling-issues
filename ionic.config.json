@@ -1,0 +1,7 @@
+{
+  "name": "strolling-issues",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
