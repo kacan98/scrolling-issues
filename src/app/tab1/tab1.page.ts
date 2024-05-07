@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  array = Array.from({ length: 20 }).map((_, i) => `Item #${i +1}`);
   constructor() {}
 
 }

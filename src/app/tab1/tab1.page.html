@@ -13,5 +13,36 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <form>
+    <ion-list>
+      <ion-item *ngFor="let input of array; index as index
+" class="ion-margin">
+        <ng-container *ngIf="index % 2; else area">
+        <ion-label position="floating">{{ input }}</ion-label>
+          <ion-input ></ion-input>
+        </ng-container>
+        <ng-template #area>
+        <ion-label position="floating">{{ input }} (textarea)</ion-label>
+          <ion-textarea autoGrow="true">
+
+          </ion-textarea>
+        </ng-template>
+
+      </ion-item>
+    </ion-list>
+  </form>
 </ion-content>
+
+<ion-footer>
+  <form>
+    <ion-button
+      class="ion-margin"
+      expand="block"
+      type="submit"
+      [title]="'Save'"
+      strong="true"
+    >
+      Submit
+    </ion-button>
+  </form>
+</ion-footer>
